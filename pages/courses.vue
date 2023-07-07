@@ -1,7 +1,7 @@
 <template>
     <div class="max-w-7xl mx-auto py-8">
-        <h2 class="text-2xl font-bold">List of Course</h2>
-        <div class="flex flex-col gap-4">
+        <h2 class="text-2xl font-bold mb-4">List of Course</h2>
+        <div class="grid grid-cols-3 gap-5">
             <LayoutCard />
             <LayoutCard />
             <LayoutCard />
