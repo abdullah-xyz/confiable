@@ -10,7 +10,7 @@
                     Teaching aspiring enterpeneur to start and grow their businesses..
                 </h3>
                 <NuxtLink to="register"
-                    class="transition duration-300 hover:scale-110 whitespace-nowrap inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                    class="transition duration-300 hover:scale-110 whitespace-nowrap inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#151b54] hover:bg-indigo-700">
                     Sign Up
                 </NuxtLink>
             </div>

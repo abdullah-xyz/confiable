@@ -19,5 +19,8 @@
     "@types/node": "^18",
     "nuxt": "^3.6.1",
     "nuxt-icon": "^0.4.2"
+  },
+  "dependencies": {
+    "nuxt-swiper": "^1.2.0"
   }
 }
