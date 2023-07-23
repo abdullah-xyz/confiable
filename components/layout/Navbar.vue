@@ -1,6 +1,6 @@
 <template>
     <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between items-center border-b-2 border-gray-100 py-6">
+        <div class="flex justify-between items-center border-b-2 border-gray-100 py-1">
             <div class="-mr-2 -my-2 md:hidden">
                 <button type="button">
                     <span class="sr-only">Open menu</span>
@@ -12,7 +12,7 @@
             </div>
             <NuxtLink to="/">
                 <span class="sr-only">Home</span>
-                <img class="h-16 md:h-24 w-auto transition duration-300 mr-8 md:hover:scale-110" src="/img/logo.png" />
+                <img class="h-16 md:h-36 w-auto transition duration-300 mr-8 md:hover:scale-110" src="/img/logo.png" />
             </NuxtLink>
             <nav class="hidden md:flex space-x-10">
 
