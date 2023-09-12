@@ -21,6 +21,8 @@
     "nuxt-icon": "^0.4.2"
   },
   "dependencies": {
+    "firebase": "^10.1.0",
+    "firebase-admin": "^11.10.1",
     "nuxt-swiper": "^1.2.0"
   }
 }
