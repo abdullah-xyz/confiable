@@ -12,7 +12,7 @@
             </div>
             <NuxtLink to="/">
                 <span class="sr-only">Home</span>
-                <img class="h-16 md:h-36 w-auto transition duration-300 mr-8 md:hover:scale-110" src="/img/logo.png" />
+                <img class="h-16 md:h-28 w-auto transition duration-300 mr-8 md:hover:scale-110" src="/img/logo.png" />
             </NuxtLink>
             <nav class="hidden md:flex space-x-10">
 
@@ -43,13 +43,14 @@
                 </NuxtLink>
             </nav>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <NuxtLink to="/login" class="whitespace-nowrap font-medium text-base text-gray-500 hover:text-gray-900">
+                <span @click="$emit('openForm', 'login')"
+                    class="whitespace-nowrap font-medium text-base text-gray-500 hover:text-gray-900 hover:cursor-pointer">
                     Sign In
-                </NuxtLink>
-                <NuxtLink to="register"
-                    class="transition duration-300 hover:scale-110 ml-8 whitespace-nowrap inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#151b54] hover:bg-indigo-700">
+                </span>
+                <span @click="$emit('openForm', 'register')"
+                    class="transition duration-300 hover:scale-110 ml-8 whitespace-nowrap inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#151b54] hover:bg-indigo-700 hover:cursor-pointer">
                     Sign Up
-                </NuxtLink>
+                </span>
             </div>
             <!-- <button class="hidden ml-4 md:block">
                 <svg v-if="$colorMode.value == 'dark'" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-50"
