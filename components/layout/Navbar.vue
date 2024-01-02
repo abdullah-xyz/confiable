@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { useUserStore } from '~/store/user'
+const userStore = useUserStore()
+
+const showMenu = ref(false)
+</script>
+
 <template>
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center border-b-2 border-gray-100 py-1">
@@ -17,7 +24,7 @@
             <nav class="hidden md:flex space-x-10">
 
                 <NuxtLink to="/courses">
-                    <span class="text-base font-medium text-gray-500 hover:text-gray-900">
+                    <span class="text-base font-medium text-light-text hover:text-gray-900">
                         Courses
                     </span>
                 </NuxtLink>
@@ -42,7 +49,19 @@
                     </span>
                 </NuxtLink>
             </nav>
-            <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            {{ userStore.isLoggedIn }}
+            <div v-if="userStore.isLoggedIn" class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                <span @click="userStore.signout()" @mouseover="showMenu = true" @mouseleave="showMenu = false"
+                    class="whitespace-nowrap gap-4 font-medium text-base text-gray-700 hover:text-gray-900 hover:cursor-pointer underline">
+                    {{ userStore.name }}
+                    <div v-if="showMenu" class="shadow-md text-gray-500 bg-white z-10 absolute w-56">
+                        <div>Setting</div>
+                        <div>Purchase and Subscriptions</div>
+                        <div>Sign Out</div>
+                    </div>
+                </span>
+            </div>
+            <div v-else class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <span @click="$emit('openForm', 'login')"
                     class="whitespace-nowrap font-medium text-base text-gray-500 hover:text-gray-900 hover:cursor-pointer">
                     Sign In

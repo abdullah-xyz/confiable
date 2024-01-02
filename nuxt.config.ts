@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "nuxt-icon",
-    "nuxt-swiper",
+    "@pinia/nuxt",
   ],
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
@@ -28,10 +28,5 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: "",
-  },
-  swiper: {
-    prefix: "Swiper",
-    styleLang: "css",
-    modules: ["navigation", "pagination", "free-mode"],
   },
 });

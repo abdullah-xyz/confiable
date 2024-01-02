@@ -1,7 +1,18 @@
 <script setup lang="ts">
+import { getDoc, collection, doc, getFirestore } from 'firebase/firestore'
+import { getAuth } from 'firebase/auth';
+import { useUserStore } from '~/store/user';
+
 const showForm = ref(false)
 const currentForm = ref('login')
 const config = useRuntimeConfig()
+const userStore = useUserStore()
+
+onMounted(() => {
+    userStore.init()
+    console.log('mounted');
+
+})
 
 function openForm(form: string) {
     currentForm.value = form
