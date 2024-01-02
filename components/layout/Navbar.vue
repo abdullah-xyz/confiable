@@ -49,7 +49,6 @@ const showMenu = ref(false)
                     </span>
                 </NuxtLink>
             </nav>
-            {{ userStore.isLoggedIn }}
             <div v-if="userStore.isLoggedIn" class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <span @click="userStore.signout()" @mouseover="showMenu = true" @mouseleave="showMenu = false"
                     class="whitespace-nowrap gap-4 font-medium text-base text-gray-700 hover:text-gray-900 hover:cursor-pointer underline">
