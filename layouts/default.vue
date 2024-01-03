@@ -9,6 +9,7 @@ const config = useRuntimeConfig()
 const userStore = useUserStore()
 
 onMounted(() => {
+    console.log(config)
     userStore.init()
     console.log('mounted');
 
