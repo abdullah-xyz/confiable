@@ -8,6 +8,7 @@ module.exports = {
         textlight: "#340923",
         background: "#f1f9f6",
         primary: "#151b56",
+        primaryText: "#f5faf9",
         secondary: "#a1add4",
         accent: "#817ec4",
       },

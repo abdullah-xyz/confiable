@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Course from 'types/course'
+import Course from '@/types/course'
 
 const props = defineProps<{
     title: string,

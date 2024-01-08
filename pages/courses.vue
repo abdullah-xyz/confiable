@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import Course from 'types/course'
+import Course from '@@/types/course'
 
 let entrepeneurshipCourse: Course[] = []
 const { data } = await useFetch<Course[]>('/api/course')
@@ -29,9 +29,9 @@ data.value?.map(course => {
 </script>
 
 <template>
-    <div class="max-w-7xl mx-auto py-8">
-
-        <LayoutSlider title="Entrepeneurship Cousre" :courses="entrepeneurshipCourse" />
-
+    <div class="bg-light-background">
+        <div class="max-w-7xl mx-auto py-8">
+            <LayoutSlider title="Entrepeneurship Cousre" :courses="entrepeneurshipCourse" />
+        </div>
     </div>
 </template>
