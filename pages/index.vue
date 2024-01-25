@@ -66,5 +66,29 @@
                 <img src="/img/service.svg" alt="" class="max-w-md">
             </div>
         </div>
+        <!-- Affordability text-[#e8e7ed] -->
+        <div class="bg-gradient-to-b from-light-accent to-light-background">
+            <div class="max-w-7xl mx-auto py-10">
+                <h2 class="text-3xl font-medium mb-2">Affordability</h2>
+                <p class="text-lg">We have designed our courses, services, and consultation at a very low price for
+                    everyone’s
+                    benefit. There
+                    are no age-related limitations, everyone can benefit from Confiable Business.</p>
+            </div>
+        </div>
+        <!-- Affordability text-[#e8e7ed] -->
+        <div class="bg-gradient-to-b from-light-accent to-light-background">
+            <div class="max-w-7xl mx-auto py-10">
+                <h2 class="text-3xl font-medium mb-2">Reason to Enroll</h2>
+                <p class="text-lg">Confiable Business is helping & guiding business personnel all over India to grow their
+                    businesses and in establishing start-ups. Be it students, emerging entrepreneurs or well-established
+                    business people, we are helping all of them through our courses, services and consultation. If you are
+                    looking for the same...</p>
+                <NuxtLink to="#"
+                    class="transition duration-300 hover:scale-110 whitespace-nowrap inline-flex justify-center items-center mt-6 px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-light-primaryText bg-light-primary hover:bg-indigo-700">
+                    Join Now
+                </NuxtLink>
+            </div>
+        </div>
     </div>
 </template>
