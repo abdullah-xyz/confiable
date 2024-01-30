@@ -1,9 +1,9 @@
 <script setup lang="ts">
 
-import Course from '@@/types/course'
+import type { ICourse } from '@@/types/course'
 
-let entrepeneurshipCourse: Course[] = []
-const { data } = await useFetch<Course[]>('/api/course')
+let entrepeneurshipCourse: ICourse[] = []
+const { data } = await useFetch<ICourse[]>('/api/course')
 
 data.value?.map(course => {
     if (course.group == 'Entrepeneurship Course') {

@@ -1,4 +1,4 @@
-interface Course {
+export interface ICourse {
   description: string;
   duration: number;
   group: string;
@@ -6,5 +6,3 @@ interface Course {
   title: string;
   slug: string;
 }
-
-export default Course;

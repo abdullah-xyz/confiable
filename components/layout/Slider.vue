@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Course from '@/types/course'
+import type { ICourse } from '@@/types/course'
 
 const props = defineProps<{
     title: string,
-    courses: Course[]
+    courses: ICourse[]
 }>()
 
 const isDragging = ref(false)
@@ -69,9 +69,20 @@ function slideButton(amt: number) {
             </div>
         </div>
         <div ref="slider" :class="isDragging ? 'cursor-grabbing' : 'snap-proximity snap-x scroll-smooth'"
-            class="flex gap-4 overflow-auto" style="scrollbar-width: none;" @mousedown="onMouseDown" @mouseup="onMouseUp">
+            class="flex gap-4 overflow-auto slider" @mousedown="onMouseDown" @mouseup="onMouseUp">
             <LayoutCard v-for="course in courses" class="snap-center" :name=course.title :price=course.price
                 :slug="course.slug" />
         </div>
     </div>
 </template>
+
+<style scoped>
+.slider {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+</style>
