@@ -3,6 +3,8 @@ module.exports = {
   theme: {
     plugins: [],
     colors: {
+      transparent: "transparent",
+      current: "currentColor",
       light: {
         text: "#050a09",
         textlight: "#340923",
@@ -11,6 +13,8 @@ module.exports = {
         primaryText: "#f5faf9",
         secondary: "#a1add4",
         accent: "#817ec4",
+        form: "#d1d5db",
+        label: "#71717a",
       },
       dark: {
         text: "#f5faf9",

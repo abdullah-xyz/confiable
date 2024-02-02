@@ -30,8 +30,8 @@ data.value?.map(course => {
 
 <template>
     <div class="bg-light-background">
-        <div class="max-w-7xl mx-auto py-8">
-            <LayoutSlider title="Entrepeneurship Cousre" :courses="entrepeneurshipCourse" />
+        <div class="max-w-screen-2xl mx-auto py-8">
+            <LayoutSlider title="Entrepeneurship Course" :courses="entrepeneurshipCourse" />
         </div>
     </div>
 </template>

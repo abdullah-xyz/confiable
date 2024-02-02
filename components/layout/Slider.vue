@@ -7,33 +7,23 @@ const props = defineProps<{
 }>()
 
 const isDragging = ref(false)
-const cursorPos = ref([0, 0])
 const slider = ref<HTMLDivElement | null>(null)
 
 function onMouseDown(e: MouseEvent) {
     isDragging.value = true
-    cursorPos.value = [e.pageX, e.pageY]
 
     window.addEventListener("mousemove", onMouseHold)
 }
 
 function onMouseHold(e: MouseEvent) {
-    console.log(e.movementX, e.movementY)
     e.preventDefault()
 
-    // requestAnimationFrame(() => {
-    //     const delta = [
-    //         e.pageX - cursorPos.value[0],
-    //         e.pageY - cursorPos.value[1]
-    //     ]
-
-    //     cursorPos.value = [e.pageX, e.pageY]
-
-    slider.value?.scrollBy({
-        left: -e.movementX,
-        top: -e.movementY
-    })
-    // })
+    if (slider.value) {
+        slider.value.scrollBy({
+            left: -e.movementX,
+            top: -e.movementY
+        })
+    }
 
 }
 
@@ -43,9 +33,9 @@ function onMouseUp(e: MouseEvent) {
 }
 
 function slideButton(amt: number) {
-    const width = slider.value?.clientWidth
 
-    if (width && slider.value) {
+    if (slider.value) {
+        const width = slider.value.clientWidth
         if (amt == 1) {
             slider.value.scrollLeft += width
         } else if (amt == -1) {
@@ -53,6 +43,7 @@ function slideButton(amt: number) {
         }
     }
 }
+
 </script>
 
 <template>
@@ -68,6 +59,7 @@ function slideButton(amt: number) {
                 </button>
             </div>
         </div>
+
         <div ref="slider" :class="isDragging ? 'cursor-grabbing' : 'snap-proximity snap-x scroll-smooth'"
             class="flex gap-4 overflow-auto slider" @mousedown="onMouseDown" @mouseup="onMouseUp">
             <LayoutCard v-for="course in courses" class="snap-center" :name=course.title :price=course.price

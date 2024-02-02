@@ -7,8 +7,8 @@ const showMenu = ref(false)
 
 <template>
     <div class="bg-light-background">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-center border-b-2 border-gray-100 py-1">
+        <div class="max-w-screen-2xl mx-auto px-4">
+            <div class="flex justify-between items-center border-b-2 border-light-form py-1">
                 <div class="-mr-2 -my-2 md:hidden">
                     <button type="button">
                         <span class="sr-only">Open menu</span>
