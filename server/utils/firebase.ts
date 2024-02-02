@@ -18,4 +18,5 @@ const app = initializeApp({
     universe_domain: "googleapis.com",
   }),
 });
+console.log(config);
 export const db = getFirestore();
