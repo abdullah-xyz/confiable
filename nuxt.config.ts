@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   runtimeConfig: {
+    firebasePrivateKeyId: "",
+    firebasePrivateKey: "",
+    firebaseClientEmail: "",
+    firebaseClientId: "",
+    firebaseClientCertUrl: "",
     public: {
       firebaseApikey: "",
       firebaseAuthDomain: "",
@@ -17,6 +22,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "nuxt-icon",
     "@pinia/nuxt",
+    "@vee-validate/nuxt",
   ],
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
