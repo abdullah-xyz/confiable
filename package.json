@@ -17,11 +17,12 @@
     "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18",
-    "nuxt": "^3.7.3",
+    "nuxt": "^3.9.0",
     "nuxt-icon": "^0.4.2"
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
+    "@vee-validate/nuxt": "^4.12.4",
     "firebase": "^10.1.0",
     "firebase-admin": "^11.10.1",
     "pinia": "^2.1.6"
