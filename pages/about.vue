@@ -119,4 +119,53 @@
             </p>
         </div>
     </div>
+    <!-- staff -->
+    <div class="bg-light-background">
+        <div class="max-w-7xl mx-auto px-4 py-10">
+            <h2 class="text-3xl font-medium mb-2">Our Great Leadership</h2>
+            <p class="text-lg mb-6">Confiable business has great leadership in providing assistance in all sectors of
+                business
+                our leadership, offering guidance and support to ensure the provision of high-quality Business education to
+                our Nation and others around the world. We are here 24/7 for your services.</p>
+            <!-- CEO -->
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <img class="w-[32rem] aspect-square border-8 rounded-3xl border-light-secondary" src="/img/staffs.jpg"
+                    alt="ceo">
+                <div>
+                    <h3 class="text-3xl font-medium">Muhammed Ali Khan</h3>
+                    <h5 class="text-xl font-medium">Founder And CEO</h5>
+                </div>
+            </div>
+            <!-- Rest -->
+            <div class="mt-8 flex flex-col md:flex-row justify-between">
+                <!-- coo -->
+                <div class="flex flex-col items-center gap-4">
+                    <img class="w-96 aspect-square border-8 rounded-3xl border-light-secondary" src="/img/staffs.jpg"
+                        alt="coo">
+                    <div>
+                        <h3 class="text-3xl font-medium">Abu Talha</h3>
+                        <h5 class="text-xl font-medium">Chief Operation Officer</h5>
+                    </div>
+                </div>
+                <!-- cto -->
+                <div class="flex flex-col items-center gap-4">
+                    <img class="w-96 aspect-square border-8 rounded-3xl border-light-secondary" src="/img/staffs.jpg"
+                        alt="cto">
+                    <div>
+                        <h3 class="text-3xl font-medium">Abdullah Asad</h3>
+                        <h5 class="text-xl font-medium">Chief Technology Officer</h5>
+                    </div>
+                </div>
+                <!-- cfo -->
+                <div class="flex flex-col items-center gap-4">
+                    <img class="w-96 aspect-square border-8 rounded-3xl border-light-secondary" src="/img/staffs.jpg"
+                        alt="cfo">
+                    <div>
+                        <h3 class="text-3xl font-medium">Abu Talh</h3>
+                        <h5 class="text-xl font-medium">Chief Financial Officer</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>

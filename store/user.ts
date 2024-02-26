@@ -26,7 +26,6 @@ export const useUserStore = defineStore("user", () => {
       updateProfile(res.user, {
         displayName: name,
       });
-      console.log(res);
       return res;
     }
   }

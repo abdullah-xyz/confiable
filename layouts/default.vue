@@ -9,10 +9,7 @@ const config = useRuntimeConfig()
 const userStore = useUserStore()
 
 onMounted(() => {
-    console.log(config)
     userStore.init()
-    console.log('mounted');
-
 })
 
 function openForm(form: string) {
@@ -29,3 +26,29 @@ function openForm(form: string) {
 
     <LayoutFooter />
 </template>
+
+<style>
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-button {
+    width: 5px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #151b56;
+    border: 0px solid transparent;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    border: 0px none #fff;
+    border-radius: 53px;
+}
+</style>

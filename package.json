@@ -23,6 +23,7 @@
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
     "@vee-validate/nuxt": "^4.12.4",
+    "@vee-validate/yup": "^4.12.5",
     "firebase": "^10.1.0",
     "firebase-admin": "^11.10.1",
     "pinia": "^2.1.6"

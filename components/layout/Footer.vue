@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-light-primary text-light-primaryText">
+    <div class="bg-light-primary text-light-primaryText sticky bottom-0 -z-10">
         <div class="max-w-7xl mx-auto flex justify-between items-center text-white py-4">
             <div class="flex flex-col gap-3">
                 <h3 class="text-xl font-medium">Confiable Business</h3>

@@ -5,6 +5,8 @@ module.exports = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
+      white: "#ffffff",
+      black: "#000000",
       light: {
         text: "#050a09",
         textlight: "#340923",
@@ -15,6 +17,7 @@ module.exports = {
         accent: "#817ec4",
         form: "#d1d5db",
         label: "#71717a",
+        error: "#ef4444",
       },
       dark: {
         text: "#f5faf9",
