@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useUserStore } from '~/store/user'
+import { useAppStore } from '~/store/app'
 const userStore = useUserStore()
+const appStore = useAppStore()
 
 const showMenu = ref(false)
 </script>
@@ -9,77 +11,62 @@ const showMenu = ref(false)
     <div class="bg-light-background">
         <div class="max-w-screen-2xl mx-auto px-4">
             <div class="flex justify-between items-center border-b-2 border-light-form py-1">
+                <!-- burger menu for mobile -->
                 <div class="-mr-2 -my-2 lg:hidden">
                     <button type="button">
                         <Icon name="charm:menu-hamburger" class="md:text-3xl text-2xl" />
                     </button>
                 </div>
+                <!-- home -->
                 <NuxtLink to="/">
                     <span class="sr-only">Home</span>
                     <img class="h-16 md:h-20 lg:h-28 w-auto transition duration-300 mr-8 md:hover:scale-110"
                         src="/img/logo.png" />
                 </NuxtLink>
                 <nav class="hidden lg:flex space-x-10">
+                    <!-- nav links -->
                     <NuxtLink to="/courses">
-                        <span class="text-base font-medium text-light-text hover:text-gray-900">
+                        <span class="text-base font-medium text-light-text">
                             Courses
                         </span>
                     </NuxtLink>
                     <NuxtLink to="/services">
-                        <span class="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <span class="text-base font-medium text-light-text">
                             Services
                         </span>
                     </NuxtLink>
                     <NuxtLink to="/counseling">
-                        <span class="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <span class="text-base font-medium text-light-text">
                             Counseling
                         </span>
                     </NuxtLink>
                     <NuxtLink to="/contact">
-                        <span class="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <span class="text-base font-medium text-light-text">
                             Contact Us
                         </span>
                     </NuxtLink>
                     <NuxtLink to="/about">
-                        <span class="text-base font-medium text-gray-500 hover:text-gray-900">
+                        <span class="text-base font-medium text-light-text">
                             About Us
                         </span>
                     </NuxtLink>
                 </nav>
+                <!-- LogOut -->
                 <div v-if="userStore.isLoggedIn" class="hidden lg:flex items-center justify-end lg:flex-1">
-                    <span @click="userStore.signout()" @mouseover="showMenu = true" @mouseleave="showMenu = false"
-                        class="whitespace-nowrap gap-4 font-medium text-base text-gray-700 hover:text-gray-900 hover:cursor-pointer underline">
+                    <span @click="userStore.signout()"
+                        class="whitespace-nowrap gap-4 font-medium text-base text-light-text hover:cursor-pointer underline">
                         {{ userStore.name }}
-                        <div v-if="showMenu" class="shadow-md text-gray-500 bg-white z-10 absolute w-56">
-                            <div>Setting</div>
-                            <div>Purchase and Subscriptions</div>
-                            <div>Sign Out</div>
-                        </div>
+
                     </span>
                 </div>
+                <!-- Login / Register -->
                 <div v-else class="hidden lg:flex items-center justify-end lg:flex-1">
-                    <span @click="$emit('openForm', 'login')"
-                        class="whitespace-nowrap font-medium text-base text-gray-500 hover:text-gray-900 hover:cursor-pointer">
+                    <span @click="appStore.openForm('login')"
+                        class="whitespace-nowrap font-medium text-base text-light-text hover:cursor-pointer">
                         Sign In
                     </span>
-                    <!-- <span @click="$emit('openForm', 'register')"
-                        class="transition duration-300 hover:scale-110 ml-8 whitespace-nowrap inline-flex justify-center items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-light-primaryText bg-light-primary hover:bg-indigo-700 hover:cursor-pointer">
-                        Sign Up
-                    </span> -->
-                    <LayoutButton class="ml-8" @click="$emit('openForm', 'register')" label="Sign Up" />
+                    <LayoutButton class="ml-8" @click="appStore.openForm('register')" label="Sign Up" />
                 </div>
-                <!-- <button class="hidden ml-4 md:block">
-                    <svg v-if="$colorMode.value == 'dark'" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-50"
-                        viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                    </svg>
-                    <svg v-if="$colorMode.value == 'light'" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6"
-                        viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd"
-                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                            clip-rule="evenodd" />
-                    </svg>
-                </button> -->
             </div>
         </div>
     </div>

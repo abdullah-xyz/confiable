@@ -8,6 +8,8 @@ import {
   GoogleAuthProvider,
   signOut,
   onAuthStateChanged,
+  sendPasswordResetEmail,
+  updatePassword,
 } from "firebase/auth";
 
 export const useUserStore = defineStore("user", () => {
@@ -35,21 +37,24 @@ export const useUserStore = defineStore("user", () => {
     await signInWithEmailAndPassword(auth, email, password);
   }
 
+  // Reset Password
+  async function resetPassword(email: string) {
+    await sendPasswordResetEmail(auth, email);
+  }
+
+  // Change password
+  async function changePassword(password: string) {
+    if (!isLoggedIn) throw "Needs to be signed in";
+    const user = auth.currentUser;
+    if (user) {
+      await updatePassword(user, password);
+    }
+  }
+
   // Sign in and sign up with existing google account
   async function signinWithGoogle() {
-    console.log("goog fired");
-
     const provider = new GoogleAuthProvider();
-    try {
-      const res = await signInWithPopup(auth, provider);
-      if (res) {
-        console.log(res);
-        return true;
-      }
-      console.log("success");
-    } catch (err: any) {
-      console.log(err.code);
-    }
+    await signInWithPopup(auth, provider);
   }
 
   // sign out
@@ -62,18 +67,14 @@ export const useUserStore = defineStore("user", () => {
   // initiate state
   function init() {
     onAuthStateChanged(auth, (user) => {
-      console.log("store init");
-
       if (user) {
         isLoggedIn.value = true;
         email.value = user.email;
         name.value = user.displayName;
-        console.log("found user");
       } else {
         isLoggedIn.value = false;
         email.value = null;
         name.value = null;
-        console.log("no user");
       }
     });
   }
@@ -86,6 +87,8 @@ export const useUserStore = defineStore("user", () => {
     init,
     signup,
     signinWithEmail,
+    changePassword,
+    resetPassword,
     signinWithGoogle,
     signout,
   };

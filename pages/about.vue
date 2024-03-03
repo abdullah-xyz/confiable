@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-light-background">
+    <div class="bg-light-background text-light-text">
         <div
             class="max-w-7xl mx-auto text-xl px-4 pt-2 [&>p]:py-2 [&>h3]:pt-3 [&>h3]:text-2xl [&>h3]:font-bold [&>h4]:font-semibold">
             <p>
@@ -120,7 +120,7 @@
         </div>
     </div>
     <!-- staff -->
-    <div class="bg-light-background">
+    <div class="bg-light-background text-light-text">
         <div class="max-w-7xl mx-auto px-4 py-10">
             <h2 class="text-3xl font-medium mb-2">Our Great Leadership</h2>
             <p class="text-lg mb-6">Confiable business has great leadership in providing assistance in all sectors of
