@@ -10,12 +10,12 @@ const appStore = useAppStore();
     @keydown.esc="appStore.closeForm"
     @keyup.esc="appStore.closeForm"
     tabindex="1"
-    class="fixed w-screen h-screen bg-black bg-opacity-50 flex justify-center items-center z-40"
+    class="fixed w-screen h-screen bg-black bg-opacity-50 flex items-start justify-center md:items-center z-30"
   >
     <div @click.stop="" class="">
       <!-- header -->
       <div
-        class="bg-light-primary text-light-primaryText text-2xl font-bold p-6 rounded-t-md flex justify-between"
+        class="bg-primary text-primaryText text-2xl font-bold px-10 md:px-6 py-6 rounded-t-md flex justify-between"
       >
         <div v-if="appStore.formRoute == 'register'">Sign Up</div>
         <div v-else-if="appStore.formRoute == 'login'">Sign In</div>
@@ -29,11 +29,20 @@ const appStore = useAppStore();
           />
         </div>
       </div>
-      <div class="p-6 bg-light-background rounded-b-md h-[30rem]">
+      <div class="p-6 bg-background rounded-b-md h-screen md:h-[30rem]">
         <!-- form -->
-        <LayoutAuthRegister v-if="appStore.formRoute == 'register'" />
-        <LayoutAuthLogin v-if="appStore.formRoute == 'login'" />
-        <LayoutAuthPasswordReset v-if="appStore.formRoute == 'passwordReset'" />
+        <LayoutAuthRegister
+          v-if="appStore.formRoute == 'register'"
+          class="flex flex-col w-screen md:w-96 gap-4 items-center h-full px-6"
+        />
+        <LayoutAuthLogin
+          v-if="appStore.formRoute == 'login'"
+          class="flex flex-col w-screen md:w-96 gap-4 items-center h-full px-6"
+        />
+        <LayoutAuthPasswordReset
+          v-if="appStore.formRoute == 'passwordReset'"
+          class="flex flex-col w-screen md:w-96 gap-4 items-center h-full px-6"
+        />
       </div>
     </div>
   </div>

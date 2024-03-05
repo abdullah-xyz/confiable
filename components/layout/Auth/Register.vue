@@ -51,10 +51,7 @@ const submitForm = handleSubmit(async (values, actions) => {
 </script>
 
 <template>
-  <form
-    @submit.prevent="submitForm"
-    class="flex flex-col w-96 gap-4 items-center h-full px-4"
-  >
+  <form @submit.prevent="submitForm">
     <!-- email -->
     <LayoutInputText name="email" label="Email" />
     <!-- name -->
@@ -68,7 +65,7 @@ const submitForm = handleSubmit(async (values, actions) => {
       type="password"
     />
     <!-- Error -->
-    <div class="text-sm text-light-error">{{ error }}</div>
+    <div class="text-sm text-error">{{ error }}</div>
 
     <!-- button -->
     <LayoutButton

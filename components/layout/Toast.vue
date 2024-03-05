@@ -7,9 +7,9 @@ const props = defineProps<{ toast: IToast; index: number }>();
 const type = computed(() => {
   switch (props.toast.type) {
     case "success":
-      return "bg-light-secondary";
+      return "bg-secondary";
     case "warning":
-      return "bg-light-error";
+      return "bg-error";
   }
 });
 

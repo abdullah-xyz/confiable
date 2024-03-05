@@ -5,7 +5,7 @@ export const useAppStore = defineStore("app", () => {
   const isFormOpen = ref<boolean>(false);
   type TFormRoute = "login" | "register" | "passwordReset";
   const formRoute = ref<TFormRoute>();
-  const toasts = ref<IToast[]>([{ type: "warning", content: "toast test" }]);
+  const toasts = ref<IToast[]>();
 
   //   open modal
   function openForm(route: TFormRoute) {

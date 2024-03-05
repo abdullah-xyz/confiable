@@ -39,10 +39,7 @@ const submitForm = handleSubmit(async (values, actions) => {
 </script>
 
 <template>
-  <form
-    @submit.prevent="submitForm"
-    class="flex flex-col w-96 gap-4 items-center h-full"
-  >
+  <form @submit.prevent="submitForm">
     <layout-input-text name="email" label="Email" />
 
     <!-- button -->
