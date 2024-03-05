@@ -1,15 +1,3 @@
-<script setup lang="ts">
-const colorMode = useColorMode();
-
-function toggleTheme() {
-  console.log("theme");
-
-  colorMode.value == "light"
-    ? (colorMode.preference = "dark")
-    : (colorMode.preference = "light");
-}
-</script>
-
 <template>
   <div class="bg-primary text-primaryText">
     <div
@@ -30,10 +18,8 @@ function toggleTheme() {
       <!-- </div>
       <div class="flex flex-row md:flex-col justify-between gap-3 w-full"> -->
       <NuxtLink to="/about" class="underline">About Us</NuxtLink>
-      <NuxtLink to="/feedback" class="underline">Feedback</NuxtLink>
-      <span @click="toggleTheme" class="underline hover:cursor-pointer"
-        >Theme: {{ colorMode.value }}</span
-      >
+      <NuxtLink to="/contact" class="underline">Contact Us</NuxtLink>
+      <NuxtLink to="/privacy" class="underline">Privacy Policy</NuxtLink>
     </div>
   </div>
 </template>
