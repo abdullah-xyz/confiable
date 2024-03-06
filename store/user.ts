@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
   GoogleAuthProvider,
+  FacebookAuthProvider,
   signOut,
   onAuthStateChanged,
   sendPasswordResetEmail,
@@ -57,6 +58,12 @@ export const useUserStore = defineStore("user", () => {
     await signInWithPopup(auth, provider);
   }
 
+  // Sign in with facebook
+  async function signinWithFacebook() {
+    const provider = new FacebookAuthProvider();
+    await signInWithPopup(auth, provider);
+  }
+
   // sign out
   async function signout() {
     try {
@@ -90,6 +97,7 @@ export const useUserStore = defineStore("user", () => {
     changePassword,
     resetPassword,
     signinWithGoogle,
+    signinWithFacebook,
     signout,
   };
 });

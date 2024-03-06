@@ -50,19 +50,31 @@ async function signInWithGoogle() {
     error.value = err.code;
   }
 }
+
+async function signInWithFacebook() {
+  try {
+    await userStore.signinWithFacebook();
+    appStore.closeForm();
+  } catch (err: any) {
+    error.value = err.code;
+  }
+}
 </script>
 
 <template>
   <form @submit.prevent="signInWithEmail">
     <!-- social auth -->
     <div class="relative flex justify-center items-center space-x-4">
+      <!-- Google -->
       <div
         @click="signInWithGoogle"
         class="bg-background border-2 border-muted rounded-md px-4 py-2 text-xl hover:cursor-pointer hover:bg-white hover:shadow-lg hover:border-primary transition-all duration-150"
       >
         <Icon name="logos:google-icon" /> Google
       </div>
+      <!-- Facebook -->
       <div
+        @click="signInWithFacebook"
         class="bg-background border-2 border-muted rounded-md px-4 py-2 text-xl hover:cursor-pointer hover:bg-white hover:shadow-lg hover:border-primary active:shadow-xl active:animate-ping transition-all duration-150"
       >
         <Icon name="logos:facebook" /> Facebook
