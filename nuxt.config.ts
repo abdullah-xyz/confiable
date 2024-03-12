@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     firebaseClientEmail: "",
     firebaseClientId: "",
     firebaseClientCertUrl: "",
+    razorpayKeySecret: "",
     public: {
       firebaseApikey: "",
       firebaseAuthDomain: "",
@@ -14,6 +15,7 @@ export default defineNuxtConfig({
       firebaseMessagingSenderId: "",
       firebaseAppId: "",
       firebaseMeasurementId: "",
+      razorpayApiKey: "",
     },
   },
   devtools: { enabled: true },
@@ -23,6 +25,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@vee-validate/nuxt",
   ],
+  plugins: ["~/plugins/razorpay.client.ts", "~/plugins/firebase.ts"],
   tailwindcss: {
     cssPath: "~/assets/css/tailwind.css",
     configPath: "tailwind.config.ts",

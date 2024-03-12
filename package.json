@@ -25,6 +25,8 @@
     "@vee-validate/yup": "^4.12.5",
     "firebase": "^10.1.0",
     "firebase-admin": "^11.10.1",
-    "pinia": "^2.1.6"
+    "nanoid": "^5.0.6",
+    "pinia": "^2.1.6",
+    "razorpay": "^2.9.2"
   }
 }

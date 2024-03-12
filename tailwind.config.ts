@@ -14,6 +14,7 @@ module.exports = {
       accent: "#817ec4",
       muted: "#d1d5db",
       label: "#71717a",
+      warning: "#f97316",
       error: "#ef4444",
     },
   },

@@ -3,9 +3,11 @@
     <div
       class="max-w-screen-2xl mx-auto px-14 grid md:grid-cols-[3fr_1fr] gap-6"
     >
+      <!-- video -->
       <div class="h-auto overflow-hidden w-full relative">
         <ElementsVideoPlayer />
       </div>
+      <!-- Lesson list -->
       <div
         class="border-b border-muted md:overflow-y-hidden md:relative h-full"
       >
@@ -25,6 +27,7 @@
           </div>
         </div>
       </div>
+      <!-- desc -->
       <div
         class="md:pb-16 [&>p]:py-2 [&>p]:text-xl [&>h3]:pt-3 [&>h3]:text-2xl [&>h3]:font-semibold"
       >
@@ -48,7 +51,9 @@
           repudiandae nulla a adipisci ut odio facere eum earum repellat itaque
           minus.
         </p>
+        <ElementsCheckout :amount="60000" />
       </div>
+      <!-- Sidebar -->
       <div class="text-xl font-medium pb-16">
         <div
           class="p-6 flex items-center gap-2 w-full rounded-md border border-muted hover:cursor-pointer hover:shadow-md mt-4"

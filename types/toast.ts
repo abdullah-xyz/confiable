@@ -1,4 +1,4 @@
 export interface IToast {
-  type: 'success' | 'warning';
+  type: "success" | "warning" | "error";
   content: string;
 }

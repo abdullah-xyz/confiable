@@ -9,14 +9,19 @@ const type = computed(() => {
     case "success":
       return "bg-secondary";
     case "warning":
+      return "bg-warning";
+    case "error":
       return "bg-error";
   }
 });
 
+let timeout: number;
+props.toast.type === "error" ? (timeout = 600000) : (timeout = 5000);
+
 onMounted(() => {
   setTimeout(() => {
     appStore.clearToast(props.index);
-  }, 5000);
+  }, timeout);
 });
 </script>
 
