@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import { useAppStore } from "~/store/app";
+import { useUserStore } from "~/store/user";
+
+const appStore = useAppStore();
+const userStore = useUserStore();
+</script>
+
 <template>
   <div class="bg-background text-text">
     <div
@@ -5,7 +13,41 @@
     >
       <!-- video -->
       <div class="h-auto overflow-hidden w-full relative">
-        <ElementsVideoPlayer />
+        <div
+          v-if="!userStore.isLoggedIn"
+          class="relative w-full h-full aspect-video bg-label"
+        >
+          <div
+            class="absolute flex flex-col w-11/12 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background p-8 rounded-md text-center"
+          >
+            <span class="text-lg font-medium"
+              >You must be
+              <span class="capitalize text-accent">signed in</span> to
+              watch</span
+            >
+            <div class="mt-4">
+              <LayoutButton class="" label="Sign In" />
+            </div>
+          </div>
+        </div>
+        <div
+          v-else-if="!userStore.isLoggedIn"
+          class="relative w-full h-full aspect-video bg-label"
+        >
+          <div
+            class="absolute flex flex-col w-11/12 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-background p-8 rounded-md text-center"
+          >
+            <span class="text-lg font-medium"
+              >You must be
+              <span class="capitalize text-accent">signed in</span> to
+              watch</span
+            >
+            <div class="mt-4">
+              <LayoutButton class="" label="Sign In" />
+            </div>
+          </div>
+        </div>
+        <ElementsVideoPlayer v-else />
       </div>
       <!-- Lesson list -->
       <div
