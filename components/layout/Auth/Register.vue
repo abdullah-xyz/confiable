@@ -33,19 +33,20 @@ const submitForm = handleSubmit(async (values, actions) => {
     });
     appStore.closeForm();
   } catch (err: any) {
-    switch (err.code) {
-      case "auth/email-already-in-use":
-        actions.setFieldError("email", "Email already in use");
-        break;
-      case "auth/invalid-email":
-        actions.setFieldError("email", "Invalid Email");
-        break;
-      case "auth/weak-password":
-        actions.setFieldError("password", "Password too weak");
-        break;
-      default:
-        error.value = "Something went wrong, try again!";
-    }
+    error.value = err.message;
+    // switch (err.code) {
+    //   case "auth/email-already-in-use":
+    //     actions.setFieldError("email", "Email already in use");
+    //     break;
+    //   case "auth/invalid-email":
+    //     actions.setFieldError("email", "Invalid Email");
+    //     break;
+    //   case "auth/weak-password":
+    //     actions.setFieldError("password", "Password too weak");
+    //     break;
+    //   default:
+    //     error.value = "Something went wrong, try again!";
+    // }
   }
 });
 </script>

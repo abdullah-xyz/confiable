@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import { getDoc, collection, doc, getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
-import { useUserStore } from "~/store/user";
-import { useAppStore } from "~/store/app";
-
 const userStore = useUserStore();
 const appStore = useAppStore();
+const user = useSupabaseUser();
 
-onMounted(() => {
-  userStore.init();
+onMounted(async () => {
+  watchEffect(() => {
+    if (user.value) {
+      userStore.init();
+    } else {
+      userStore.$reset();
+    }
+  });
 });
 </script>
 

@@ -15,16 +15,15 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "@types/node": "^18",
+    "@types/node": "^18.0.0",
     "nuxt": "^3.9.0",
     "nuxt-icon": "^0.4.2"
   },
   "dependencies": {
+    "@nuxtjs/supabase": "^1.2.2",
     "@pinia/nuxt": "^0.4.11",
     "@vee-validate/nuxt": "^4.12.4",
     "@vee-validate/yup": "^4.12.5",
-    "firebase": "^10.1.0",
-    "firebase-admin": "^11.10.1",
     "nanoid": "^5.0.6",
     "pinia": "^2.1.6",
     "razorpay": "^2.9.2"

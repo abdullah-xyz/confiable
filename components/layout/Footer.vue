@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary text-primaryText">
+  <div class="bg-primary text-primaryText sticky w-full bottom-0 -z-50">
     <div
       class="max-w-7xl mx-auto grid grid-cols-3 grid-flow-row md:grid-rows-3 md:grid-flow-col px-10 py-4 gap-3"
     >
