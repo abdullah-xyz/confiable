@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { useUserStore } from "~/store/user";
-import { useAppStore } from "~/store/app";
 const userStore = useUserStore();
 const appStore = useAppStore();
 
@@ -154,12 +152,20 @@ const showMenu = ref(false);
           v-if="userStore.isLoggedIn"
           class="hidden lg:flex items-center justify-end lg:flex-1"
         >
-          <span
-            @click="userStore.signout()"
-            class="whitespace-nowrap gap-4 font-medium text-base text-text hover:cursor-pointer underline"
-          >
-            {{ userStore.name }}
-          </span>
+          <NuxtLink class="hover:cursor-pointer" to="/profile">
+            <div>
+              <img
+                v-if="userStore.avatarUrl"
+                :src="userStore.avatarUrl"
+                class="border-2 rounded-full w-11"
+              />
+              <Icon
+                v-else
+                name="material-symbols-light:account-circle"
+                class="text-6xl"
+              />
+            </div>
+          </NuxtLink>
         </div>
 
         <!-- Login / Register -->

@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { useUserStore } from "~/store/user";
-import { useAppStore } from "~/store/app";
 import { useForm } from "vee-validate";
 import * as yup from "yup";
-import { mapActions } from "pinia";
 const userStore = useUserStore();
 const appStore = useAppStore();
 
@@ -26,19 +23,21 @@ const signInWithEmail = handleSubmit(async (values, actions) => {
     actions.resetForm();
     appStore.closeForm();
   } catch (err: any) {
-    switch (err.code) {
-      case "auth/wrong-password":
-        actions.setFieldError("password", "Incorrect Password");
-        break;
-      case "auth/invalid-email":
-        actions.setFieldError("email", "Invalid Email");
-        break;
-      case "auth/user-not-found":
-        actions.setFieldError("email", "User not found");
-        break;
-      default:
-        error.value = "Something went wrong, try again!";
-    }
+    // switch (err.code) {
+    //   case "auth/wrong-password":
+    //     actions.setFieldError("password", "Incorrect Password");
+    //     break;
+    //   case "auth/invalid-email":
+    //     actions.setFieldError("email", "Invalid Email");
+    //     break;
+    //   case "auth/user-not-found":
+    //     actions.setFieldError("email", "User not found");
+    //     break;
+    //   default:
+    //     console.log(err.message);
+    //     error.value = "Something went wrong, try again!";
+    // }
+    error.value = err.message;
   }
 });
 

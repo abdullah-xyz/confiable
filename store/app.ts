@@ -21,7 +21,7 @@ export const useAppStore = defineStore("app", () => {
   //   create toast
   function createToast(toast: IToast) {
     toasts.value?.push(toast);
-    console.log("created toast");
+    console.log("created toast: ", toast);
   }
 
   //   remove toast
