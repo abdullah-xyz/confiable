@@ -30,11 +30,10 @@ export default defineNuxtConfig({
   ],
   plugins: ["~/plugins/razorpay.client.ts"],
   tailwindcss: {
-    cssPath: "~/assets/css/tailwind.css",
+    cssPath: ["~/assets/css/tailwind.css", {injectPosition: "first"}],
     configPath: "tailwind.config.ts",
     exposeConfig: false,
     config: {},
-    injectPosition: "first",
     viewer: true,
   },
   pinia: {
