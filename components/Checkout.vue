@@ -77,7 +77,7 @@ async function paymentHandler() {
 </script>
 
 <template>
-  <LayoutButton
+  <Button
     @click="paymentHandler"
     label="Buy"
     class="px-6"

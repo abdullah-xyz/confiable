@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useForm } from "vee-validate";
 import * as yup from "yup";
 const userStore = useUserStore();
 const appStore = useAppStore();
@@ -80,16 +79,16 @@ async function signInWithFacebook() {
       </div>
     </div>
 
-    <ElementsOr />
+    <SeperatorOr />
 
     <!-- <h2 class="text-3xl font-bold mb-6 text-center">Login</h2> -->
-    <LayoutInputText name="email" label="Email" />
+    <InputText name="email" label="Email" />
     <!-- password -->
-    <LayoutInputText name="password" label="Password" type="password" />
+    <InputText name="password" label="Password" type="password" />
 
     <div class="text-sm text-error mt-3">{{ error }}</div>
     <!-- button -->
-    <LayoutButton
+    <Button
       class="mt-4"
       label="Login"
       :submitting="isSubmitting"

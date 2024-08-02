@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useForm } from "vee-validate";
 import * as yup from "yup";
 const userStore = useUserStore();
 const appStore = useAppStore();
@@ -52,13 +51,13 @@ const submitForm = handleSubmit(async (values, actions) => {
 <template>
   <form @submit.prevent="submitForm">
     <!-- email -->
-    <LayoutInputText name="email" label="Email" />
+    <InputText name="email" label="Email" />
     <!-- name -->
-    <LayoutInputText name="name" label="Name" />
+    <InputText name="name" label="Name" />
     <!-- password -->
-    <LayoutInputText name="password" label="Password" type="password" />
+    <InputText name="password" label="Password" type="password" />
     <!-- Confirm Password -->
-    <LayoutInputText
+    <InputText
       name="passwordConfirm"
       label="Confirm Password"
       type="password"
@@ -67,7 +66,7 @@ const submitForm = handleSubmit(async (values, actions) => {
     <div class="text-sm text-error">{{ error }}</div>
 
     <!-- button -->
-    <LayoutButton
+    <Button
       class="mt-4"
       label="Sign Up"
       :submitting="isSubmitting"

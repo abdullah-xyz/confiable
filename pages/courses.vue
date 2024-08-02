@@ -14,7 +14,7 @@ data.value?.map((course) => {
 <template>
   <div class="bg-background">
     <div class="max-w-screen-2xl mx-auto py-8 px-4">
-      <LayoutSlider
+      <Slider
         title="Entrepeneurship Course"
         :courses="entrepeneurshipCourse"
       />
@@ -22,7 +22,7 @@ data.value?.map((course) => {
   </div>
   <div class="bg-background">
     <div class="max-w-screen-2xl mx-auto py-8 px-4">
-      <LayoutSlider
+      <Slider
         title="Entrepeneurship Course"
         :courses="entrepeneurshipCourse"
       />

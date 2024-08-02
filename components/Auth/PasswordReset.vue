@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useForm } from "vee-validate";
 import * as yup from "yup";
 const userStore = useUserStore();
 const appStore = useAppStore();
@@ -38,10 +37,10 @@ const submitForm = handleSubmit(async (values, actions) => {
 
 <template>
   <form @submit.prevent="submitForm">
-    <layout-input-text name="email" label="Email" />
+    <InputText name="email" label="Email" />
 
     <!-- button -->
-    <layoutButton
+    <Button
       class="mt-8"
       label="Reset Password"
       :submitting="isSubmitting"

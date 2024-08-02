@@ -15,13 +15,13 @@ onMounted(async () => {
 </script>
 
 <template>
-  <LayoutAuthForm v-if="appStore.isFormOpen" />
-  <LayoutToasts />
-  <LayoutNavbar />
+  <AuthForm v-if="appStore.isFormOpen" />
+  <Toasts />
+  <Navbar />
 
   <slot />
 
-  <LayoutFooter />
+  <Footer />
 </template>
 
 <style>

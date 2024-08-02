@@ -1,10 +1,14 @@
 <script setup lang="ts">
-import type { ICourse } from "@@/types/course";
-
-const props = defineProps<{
-  title: string;
-  courses: ICourse[];
-}>();
+const props = defineProps({
+  title: {
+    type: String,
+    required: true
+  },
+  courses: {
+    type: Object as PropType<ICourse>,
+    required: true, 
+  }
+})
 
 const isDragging = ref(false);
 const slider = ref<HTMLDivElement | null>(null);
@@ -66,7 +70,7 @@ function slideButton(amt: number) {
       @mousedown="onMouseDown"
       @mouseup="onMouseUp"
     >
-      <LayoutCard
+      <Card
         v-for="course in courses"
         class="snap-center"
         :name="course.title"

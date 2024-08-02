@@ -31,15 +31,15 @@ const appStore = useAppStore();
       </div>
       <div class="p-6 bg-background rounded-b-md h-screen md:h-[30rem]">
         <!-- form -->
-        <LayoutAuthRegister
+        <AuthRegister
           v-if="appStore.formRoute == 'register'"
           class="flex flex-col w-screen md:w-96 gap-4 items-center h-full px-6"
         />
-        <LayoutAuthLogin
+        <AuthLogin
           v-if="appStore.formRoute == 'login'"
           class="flex flex-col w-screen md:w-96 gap-4 items-center h-full px-6"
         />
-        <LayoutAuthPasswordReset
+        <AuthPasswordReset
           v-if="appStore.formRoute == 'passwordReset'"
           class="flex flex-col w-screen md:w-96 gap-4 items-center h-full px-6"
         />

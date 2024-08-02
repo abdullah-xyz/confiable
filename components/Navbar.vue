@@ -176,7 +176,7 @@ const showMenu = ref(false);
           >
             Sign In
           </span>
-          <LayoutButton
+          <Button
             class="ml-8"
             @click="appStore.openForm('register')"
             label="Sign Up"

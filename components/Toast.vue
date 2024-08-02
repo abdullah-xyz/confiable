@@ -1,8 +1,16 @@
 <script setup lang="ts">
-import { useAppStore } from "~/store/app";
-import type { IToast } from "~/types/toast";
 const appStore = useAppStore();
-const props = defineProps<{ toast: IToast; index: number }>();
+
+const props = defineProps({
+  toast: {
+    type: Object as PropType<IToast>,
+    required: true,
+  },
+  index: {
+    type: Number,
+    required: true,
+  }
+})
 
 const type = computed(() => {
   switch (props.toast.type) {

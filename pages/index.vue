@@ -20,9 +20,9 @@ const appStore = useAppStore();
           ___________________ for a free consultation. We look forward to
           hearing from you!
         </p>
-        <LayoutButton @click="appStore.openForm('register')" label="Sign Up" />
+        <Button @click="appStore.openForm('register')" label="Sign Up" />
       </div>
-      <ElementsVideoPlayer class="" />
+      <VideoPlayer class="" />
     </div>
   </div>
   <!-- seperator -->

@@ -5,7 +5,7 @@ const appStore = useAppStore();
 
 <template>
   <div class="fixed right-0 top-0 z-40">
-    <LayoutToast
+    <Toast
       v-for="(toast, index) of appStore.toasts"
       :index="index"
       :toast="toast"

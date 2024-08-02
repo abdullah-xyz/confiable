@@ -22,7 +22,7 @@ const userStore = useUserStore();
               watch</span
             >
             <div class="mt-4">
-              <LayoutButton class="" label="Sign In" />
+              <Button class="" label="Sign In" />
             </div>
           </div>
         </div>
@@ -39,11 +39,11 @@ const userStore = useUserStore();
               watch</span
             >
             <div class="mt-4">
-              <LayoutButton class="" label="Sign In" />
+              <Button class="" label="Sign In" />
             </div>
           </div>
         </div>
-        <ElementsVideoPlayer v-else />
+        <VideoPlayer v-else />
       </div>
       <!-- Lesson list -->
       <div
@@ -89,7 +89,7 @@ const userStore = useUserStore();
           repudiandae nulla a adipisci ut odio facere eum earum repellat itaque
           minus.
         </p>
-        <ElementsCheckout :amount="60000" />
+        <Checkout :amount="60000" />
       </div>
       <!-- Sidebar -->
       <div class="text-xl font-medium pb-16">

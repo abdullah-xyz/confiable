@@ -40,7 +40,7 @@ const showChangeEmail = ref(false);
           <span class="font-bold underline decoration-error">Warning</span>
         </div>
         <div class="text-lg pt-3 flex justify-center">
-          <LayoutButton label="Delete Account" />
+          <Button label="Delete Account" />
         </div>
       </div>
     </div>
