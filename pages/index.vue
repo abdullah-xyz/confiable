@@ -1,40 +1,24 @@
 <script setup lang="ts">
-import { useAppStore } from "~/store/app";
 const appStore = useAppStore();
 </script>
 
 <template>
   <div class="bg-background text-text">
     <!-- Hero -->
-    <div
-      class="md:py-20 py-10 px-10 max-w-screen-2xl mx-auto grid items-center lg:grid-cols-[1fr_1fr] gap-16 md:gap-16 xl:gap-32"
-    >
-      <div>
-        <h2 class="text-4xl font-bold mb-2">Welcome to Confiable Business!</h2>
-        <h3 class="text-2xl font-medium mb-4">Want to be an entrepreneur?</h3>
-        <p class="mb-6 text-lg">
-          We offer of quality services to help you to be an entrepreneur, a
-          business person and many more. Our dedicated and experienced
-          professionals specialize in different fields will help you in any
-          business related queries. Contact us at Mail address
-          ___________________ for a free consultation. We look forward to
-          hearing from you!
-        </p>
-        <Button @click="appStore.openForm('register')" label="Sign Up" />
-      </div>
-      <VideoPlayer class="" />
-    </div>
-  </div>
+    <Hero2 />
   <!-- seperator -->
   <div class="bg-gradient-to-b from-secondary to-background text-text px-2">
     <div
       class="max-w-7xl mx-auto text-xl py-12 flex flex-col items-center text-center"
     >
       <h2 class="text-3xl font-medium mb-1">
-        Helping establish solid business!
+        Want to be an entrepreneur?
       </h2>
       <h3 class="text-2xl mb-2">
-        Teaching aspiring enterpeneur to start and grow their businesses..
+        We offer of quality services to help you to be an entrepreneur, a
+          business person and many more. Our dedicated and experienced
+          professionals specialize in different fields will help you in any
+          business related queries.
       </h3>
     </div>
   </div>
@@ -43,7 +27,7 @@ const appStore = useAppStore();
   <h2
     class="bg-background text-text text-center text-4xl font-medium tracking-wide pt-8"
   >
-    Our Offerings
+    <span class="bg-secondary px-4 skew-x-4">Our Offerings</span>
   </h2>
   <div class="bg-background text-text py-6">
     <div
@@ -193,4 +177,5 @@ const appStore = useAppStore();
       </div>
     </div>
   </div>
+</div>
 </template>

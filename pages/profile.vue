@@ -31,8 +31,11 @@ const showChangeEmail = ref(false);
             >Change Email</span
           >
         </div>
+        <div class="text-lg pt-3">
+          <Button @click="userStore.signout()" label="Sign Out" />
+        </div>
         <div>
-          <!-- change Eamil    -->
+          <!-- Delete Account -->
         </div>
       </div>
       <div class="py-8">

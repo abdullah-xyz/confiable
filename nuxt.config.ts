@@ -20,7 +20,9 @@ export default defineNuxtConfig({
       supabaseKey: "",
     },
   },
+
   devtools: { enabled: true },
+
   modules: [
     "@nuxtjs/tailwindcss",
     "nuxt-icon",
@@ -28,7 +30,9 @@ export default defineNuxtConfig({
     "@vee-validate/nuxt",
     "@nuxtjs/supabase",
   ],
+
   plugins: ["~/plugins/razorpay.client.ts"],
+
   tailwindcss: {
     cssPath: ["~/assets/css/tailwind.css", {injectPosition: "first"}],
     configPath: "tailwind.config.ts",
@@ -36,14 +40,19 @@ export default defineNuxtConfig({
     config: {},
     viewer: true,
   },
+
   pinia: {
     autoImports: ["defineStore"],
   },
+
   imports: {
     dirs: ["./store", "./types"],
   },
+
   supabase: {
     redirect: false,
   },
+
   ssr: true,
+  compatibilityDate: "2024-08-17",
 });

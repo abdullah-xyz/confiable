@@ -6,7 +6,7 @@ const showMenu = ref(false);
 </script>
 
 <template>
-  <div class="bg-background sticky top-0 left-0 z-10">
+  <div class="bg-background fixed w-screen top-0 left-0 z-10">
     <div class="max-w-screen-2xl mx-auto px-4">
       <div
         class="flex justify-between h-16 md:h-24 items-center border-b-2 border-muted py-1"

@@ -1,8 +1,8 @@
-export interface ICourse {
+export interface  ICourse {
   description: string;
+  one_liner: string;
   duration: number;
   group: string;
   price: number;
-  title: string;
-  slug: string;
+  name: string;
 }

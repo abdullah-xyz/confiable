@@ -73,9 +73,10 @@ function slideButton(amt: number) {
       <Card
         v-for="course in courses"
         class="snap-center"
-        :name="course.title"
+        :name="course.name"
         :price="course.price"
         :slug="course.slug"
+        :one_liner="course.one_liner"
       />
     </div>
   </div>

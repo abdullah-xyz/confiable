@@ -1,11 +1,8 @@
-// import { db } from "../utils/firebase";
+import { serverSupabaseClient } from "#supabase/server";
 
-// export default defineEventHandler(async (event) => {
-//   const coursesRef = db.collection("Course");
-//   const courses = await coursesRef.get();
-//   const docs: FirebaseFirestore.DocumentData = [];
-//   courses.forEach((course) => {
-//     docs.push(course.data());
-//   });
-//   return docs;
-// });
+export default defineEventHandler(async (event) => {
+  const client = await serverSupabaseClient(event);
+
+  const { data } = await client.from("courses").select("*");
+  return data;
+});

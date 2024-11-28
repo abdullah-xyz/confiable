@@ -1,10 +1,10 @@
 <template>
-  <div class="bg-primary text-primaryText sticky w-full bottom-0 -z-50">
+  <div class="sticky bottom-0 py-4 -z-50 w-full bg-primary text-primaryText">
     <div
-      class="max-w-7xl mx-auto grid grid-cols-3 grid-flow-row md:grid-rows-3 md:grid-flow-col px-10 py-4 gap-3"
+      class="mx-auto grid max-w-7xl grid-flow-row grid-cols-3 gap-3 gap-y-6 px-10 py-4 md:grid-flow-col md:grid-rows-3"
     >
       <div
-        class="text-xl font-medium grid col-span-3 md:col-span-1 md:row-span-3 grid-cols-subgrid md:grid-rows-subgrid"
+        class="col-span-3 grid grid-cols-subgrid text-xl font-medium md:col-span-1 md:row-span-3 md:grid-rows-subgrid"
       >
         <h3 class="col-start-2 md:col-start-1 md:row-start-2">
           Confiable Business
