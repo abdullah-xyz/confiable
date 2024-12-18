@@ -45,7 +45,7 @@ const showMenu = ref(false);
             <span
               class="text-base font-medium text-text block px-4 py-6 rounded-md hover:bg-secondary"
             >
-              Courses
+              Programmes
             </span>
           </NuxtLink>
           <NuxtLink @click="showMenu = !showMenu" to="/services">
@@ -59,7 +59,7 @@ const showMenu = ref(false);
             <span
               class="text-base font-medium text-text block px-4 py-6 rounded-md hover:bg-secondary"
             >
-              Counseling
+              Mentorship
             </span>
           </NuxtLink>
           <NuxtLink @click="showMenu = !showMenu" to="/contact">
@@ -131,13 +131,13 @@ const showMenu = ref(false);
         <nav class="hidden lg:flex space-x-10">
           <!-- nav links -->
           <NuxtLink to="/courses">
-            <span class="text-base font-medium text-text"> Courses </span>
+            <span class="text-base font-medium text-text"> Programmes </span>
           </NuxtLink>
           <NuxtLink to="/services">
             <span class="text-base font-medium text-text"> Services </span>
           </NuxtLink>
           <NuxtLink to="/counseling">
-            <span class="text-base font-medium text-text"> Counseling </span>
+            <span class="text-base font-medium text-text"> Mentorship </span>
           </NuxtLink>
           <NuxtLink to="/contact">
             <span class="text-base font-medium text-text"> Contact Us </span>
