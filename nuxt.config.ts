@@ -29,6 +29,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@vee-validate/nuxt",
     "@nuxtjs/supabase",
+    "@nuxt/image",
   ],
 
   plugins: ["~/plugins/razorpay.client.ts"],
