@@ -23,8 +23,13 @@ const itemes = [
 
 <template>
   <div v-for="item in props.items">
-    <AccordianItem class="my-2" icon="logo-c.png" :title="item.title" :content="item.content">
-      <slot name="content" :content="item.content"/>
+    <AccordianItem icon="logo-c.png" :title="item.title" :content="item.content">
+      <template #header>
+        <slot name="header" :title="item.title" :icon="item.icon" />
+      </template>
+      <template #content>
+        <slot name="content" :content="item.content"/>
+      </template>
     </AccordianItem>
   </div>
 </template>

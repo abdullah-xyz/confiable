@@ -41,7 +41,7 @@ const showMenu = ref(false);
           v-if="showMenu"
           class="lg:hidden fixed left-0 top-16 h-screen w-screen bg-background -z-10 py-2 px-6"
         >
-          <NuxtLink @click="showMenu = !showMenu" to="/courses">
+          <NuxtLink @click="showMenu = !showMenu" to="/programmes">
             <span
               class="text-base font-medium text-text block px-4 py-6 rounded-md hover:bg-secondary"
             >
@@ -55,7 +55,7 @@ const showMenu = ref(false);
               Services
             </span>
           </NuxtLink>
-          <NuxtLink @click="showMenu = !showMenu" to="/counseling">
+          <NuxtLink @click="showMenu = !showMenu" to="/mentorship">
             <span
               class="text-base font-medium text-text block px-4 py-6 rounded-md hover:bg-secondary"
             >
@@ -130,13 +130,13 @@ const showMenu = ref(false);
         <!-- desktop nav -->
         <nav class="hidden lg:flex space-x-10">
           <!-- nav links -->
-          <NuxtLink to="/courses">
+          <NuxtLink to="/programmes">
             <span class="text-base font-medium text-text"> Programmes </span>
           </NuxtLink>
           <NuxtLink to="/services">
             <span class="text-base font-medium text-text"> Services </span>
           </NuxtLink>
-          <NuxtLink to="/counseling">
+          <NuxtLink to="/mentorship">
             <span class="text-base font-medium text-text"> Mentorship </span>
           </NuxtLink>
           <NuxtLink to="/contact">

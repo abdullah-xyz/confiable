@@ -12,8 +12,8 @@
       </div>
       <!-- </div>
       <div class="flex flex-row md:flex-col justify-between gap-3 w-full"> -->
-      <NuxtLink to="/courses" class="underline hover:cursor-pointer">Course</NuxtLink>
-      <NuxtLink to="/counseling" class="underline hover:cursor-pointer">Counseling</NuxtLink>
+      <NuxtLink to="/programmes" class="underline hover:cursor-pointer">Programmes</NuxtLink>
+      <NuxtLink to="/mentorship" class="underline hover:cursor-pointer">Mentorship</NuxtLink>
       <NuxtLink to="/services" class="underline hover:cursor-pointer">Services</NuxtLink>
       <!-- </div>
       <div class="flex flex-row md:flex-col justify-between gap-3 w-full"> -->

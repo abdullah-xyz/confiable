@@ -31,7 +31,7 @@ const appStore = useAppStore();
       class="mx-10 flex flex-col justify-evenly gap-3 lg:max-w-7xl xl:mx-auto xl:flex-row"
     >
       <!-- Courses -->
-      <NuxtLink to="/courses">
+      <NuxtLink to="/programmes">
         <div
           class="flex flex-col items-center rounded-md border border-muted p-6 hover:cursor-pointer hover:shadow-md xl:w-96"
         >
@@ -48,7 +48,7 @@ const appStore = useAppStore();
         </div>
       </NuxtLink>
       <!-- Counseling -->
-      <NuxtLink to="/counseling">
+      <NuxtLink to="/mentorship">
         <div
           class="flex flex-col items-center rounded-md border border-muted p-6 hover:cursor-pointer hover:shadow-md xl:w-96"
         >
