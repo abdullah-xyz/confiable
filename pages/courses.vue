@@ -119,8 +119,6 @@ const items = [
 </script>
 
 <template>
-  <div class="h-24"></div>
-  <div class="bg-background">
     <div class="mx-auto max-w-screen-xl px-4 py-8">
       <div class="px-3 text-3xl font-medium">Our Offered Program</div>
       <Accordian :items="items">
@@ -139,5 +137,4 @@ const items = [
         </template>
       </Accordian>
     </div>
-  </div>
 </template>

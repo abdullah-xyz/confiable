@@ -3,49 +3,46 @@ const appStore = useAppStore();
 </script>
 
 <template>
-  <div class="bg-background text-text">
-    <!-- Hero -->
-    <Hero2 />
+  <!-- Hero -->
+  <Hero2 />
   <!-- seperator -->
-  <div class="bg-gradient-to-b from-secondary to-background text-text px-2">
+  <div class="bg-gradient-to-b from-secondary to-background px-2 text-text">
     <div
-      class="max-w-7xl mx-auto text-xl py-12 flex flex-col items-center text-center"
+      class="mx-auto flex max-w-7xl flex-col items-center py-12 text-center text-xl"
     >
-      <h2 class="text-3xl font-medium mb-1">
-        Want to be an entrepreneur?
-      </h2>
-      <h3 class="text-2xl mb-2">
+      <h2 class="mb-1 text-3xl font-medium">Want to be an entrepreneur?</h2>
+      <h3 class="mb-2 text-2xl">
         We offer of quality services to help you to be an entrepreneur, a
-          business person and many more. Our dedicated and experienced
-          professionals specialize in different fields will help you in any
-          business related queries.
+        business person and many more. Our dedicated and experienced
+        professionals specialize in different fields will help you in any
+        business related queries.
       </h3>
     </div>
   </div>
   <!-- Features -->
   <!-- learn -->
   <h2
-    class="bg-background text-text text-center text-4xl font-medium tracking-wide pt-8"
+    class="bg-background pt-8 text-center text-4xl font-medium tracking-wide text-text"
   >
-    <span class="bg-secondary px-4 skew-x-4">Our Offerings</span>
+    <span class="skew-x-4 bg-secondary px-4">Our Offerings</span>
   </h2>
-  <div class="bg-background text-text py-6">
+  <div class="bg-background py-6 text-text">
     <div
-      class="flex flex-col xl:flex-row gap-3 justify-evenly mx-10 lg:max-w-7xl xl:mx-auto"
+      class="mx-10 flex flex-col justify-evenly gap-3 lg:max-w-7xl xl:mx-auto xl:flex-row"
     >
       <!-- Courses -->
       <NuxtLink to="/courses">
         <div
-          class="border rounded-md p-6 border-muted flex flex-col items-center xl:w-96 hover:shadow-md hover:cursor-pointer"
+          class="flex flex-col items-center rounded-md border border-muted p-6 hover:cursor-pointer hover:shadow-md xl:w-96"
         >
           <div>
             <Icon
-              class="text-8xl p-2 rounded-full bg-secondary"
+              class="rounded-full bg-secondary p-2 text-8xl"
               name="material-symbols-light:school-outline-rounded"
             />
           </div>
-          <h3 class="text-2xl font-medium pt-3">Courses</h3>
-          <p class="text-center text-lg pt-1">
+          <h3 class="pt-3 text-2xl font-medium">Courses</h3>
+          <p class="pt-1 text-center text-lg">
             Learn from our experts to rapidly build your business
           </p>
         </div>
@@ -53,16 +50,16 @@ const appStore = useAppStore();
       <!-- Counseling -->
       <NuxtLink to="/counseling">
         <div
-          class="border rounded-md p-6 border-muted flex flex-col items-center xl:w-96 hover:shadow-md hover:cursor-pointer"
+          class="flex flex-col items-center rounded-md border border-muted p-6 hover:cursor-pointer hover:shadow-md xl:w-96"
         >
           <div>
             <Icon
-              class="text-8xl p-3 rounded-full bg-secondary"
+              class="rounded-full bg-secondary p-3 text-8xl"
               name="material-symbols-light:person-raised-hand-outline-rounded"
             />
           </div>
-          <h3 class="text-2xl font-medium pt-3">Counseling</h3>
-          <p class="text-center text-lg pt-1">
+          <h3 class="pt-3 text-2xl font-medium">Counseling</h3>
+          <p class="pt-1 text-center text-lg">
             Consult our experts to quickly grow your business
           </p>
         </div>
@@ -70,16 +67,16 @@ const appStore = useAppStore();
       <!-- Services -->
       <NuxtLink to="/services">
         <div
-          class="border rounded-md p-6 border-muted flex flex-col items-center xl:w-96 hover:shadow-md hover:cursor-pointer"
+          class="flex flex-col items-center rounded-md border border-muted p-6 hover:cursor-pointer hover:shadow-md xl:w-96"
         >
           <div>
             <Icon
-              class="text-8xl p-3 rounded-full bg-secondary"
+              class="rounded-full bg-secondary p-3 text-8xl"
               name="material-symbols-light:lab-profile-outline-rounded"
             />
           </div>
-          <h3 class="text-2xl font-medium pt-3">Services</h3>
-          <p class="text-center text-lg pt-1">
+          <h3 class="pt-3 text-2xl font-medium">Services</h3>
+          <p class="pt-1 text-center text-lg">
             Work with our experts to take your business to success
           </p>
         </div>
@@ -88,8 +85,8 @@ const appStore = useAppStore();
   </div>
   <!-- Affordability  -->
   <div class="bg-background text-text">
-    <div class="max-w-7xl mx-auto px-4 py-10">
-      <h2 class="text-3xl font-medium mb-2">Affordability</h2>
+    <div class="mx-auto max-w-7xl px-4 py-10">
+      <h2 class="mb-2 text-3xl font-medium">Affordability</h2>
       <p class="text-lg">
         We have designed our courses, services, and consultation at a very low
         price for everyone’s benefit. There are no age-related limitations,
@@ -97,8 +94,8 @@ const appStore = useAppStore();
       </p>
     </div>
     <!-- Reason to enroll -->
-    <div class="max-w-7xl mx-auto px-4 py-10">
-      <h2 class="text-3xl font-medium mb-2">Reason to Enroll</h2>
+    <div class="mx-auto max-w-7xl px-4 py-10">
+      <h2 class="mb-2 text-3xl font-medium">Reason to Enroll</h2>
       <p class="text-lg">
         Confiable Business is helping & guiding business personnel all over
         India to grow their businesses and in establishing start-ups. Be it
@@ -108,7 +105,7 @@ const appStore = useAppStore();
       </p>
       <NuxtLink
         to="#"
-        class="transition duration-300 hover:scale-110 whitespace-nowrap inline-flex justify-center items-center mt-6 px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-primaryText bg-primary hover:bg-indigo-700"
+        class="hover:bg-indigo-700 mt-6 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-primary px-4 py-2 text-base font-medium text-primaryText shadow-sm transition duration-300 hover:scale-110"
       >
         Join Now
       </NuxtLink>
@@ -116,18 +113,18 @@ const appStore = useAppStore();
   </div>
   <!-- staff -->
   <div class="bg-background text-text">
-    <div class="max-w-7xl mx-auto px-4 py-10">
-      <h2 class="text-3xl font-medium mb-2">Our Great Leadership</h2>
-      <p class="text-lg mb-6">
+    <div class="mx-auto max-w-7xl px-4 py-10">
+      <h2 class="mb-2 text-3xl font-medium">Our Great Leadership</h2>
+      <p class="mb-6 text-lg">
         Confiable business has great leadership in providing assistance in all
         sectors of business our leadership, offering guidance and support to
         ensure the provision of high-quality Business education to our Nation
         and others around the world. We are here 24/7 for your services.
       </p>
       <!-- CEO -->
-      <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="flex flex-col items-center gap-8 md:flex-row">
         <img
-          class="w-[32rem] aspect-square border-8 rounded-3xl border-secondary"
+          class="aspect-square w-[32rem] rounded-3xl border-8 border-secondary"
           src="/img/staffs.jpg"
           alt="ceo"
         />
@@ -137,11 +134,11 @@ const appStore = useAppStore();
         </div>
       </div>
       <!-- Rest -->
-      <div class="mt-8 flex flex-col md:flex-row justify-between">
+      <div class="mt-8 flex flex-col justify-between md:flex-row">
         <!-- coo -->
         <div class="flex flex-col items-center gap-4">
           <img
-            class="w-96 aspect-square border-8 rounded-3xl border-secondary"
+            class="aspect-square w-96 rounded-3xl border-8 border-secondary"
             src="/img/staffs.jpg"
             alt="coo"
           />
@@ -153,7 +150,7 @@ const appStore = useAppStore();
         <!-- cto -->
         <div class="flex flex-col items-center gap-4">
           <img
-            class="w-96 aspect-square border-8 rounded-3xl border-secondary"
+            class="aspect-square w-96 rounded-3xl border-8 border-secondary"
             src="/img/staffs.jpg"
             alt="cto"
           />
@@ -165,7 +162,7 @@ const appStore = useAppStore();
         <!-- cfo -->
         <div class="flex flex-col items-center gap-4">
           <img
-            class="w-96 aspect-square border-8 rounded-3xl border-secondary"
+            class="aspect-square w-96 rounded-3xl border-8 border-secondary"
             src="/img/staffs.jpg"
             alt="cfo"
           />
@@ -177,5 +174,4 @@ const appStore = useAppStore();
       </div>
     </div>
   </div>
-</div>
 </template>

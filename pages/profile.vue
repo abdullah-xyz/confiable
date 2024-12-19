@@ -4,10 +4,9 @@ const showChangeEmail = ref(false);
 </script>
 
 <template>
-  <div class="bg-background pt-8 text-text">
     <div class="mx-auto max-w-screen-sm gap-8">
       <div class="flex justify-evenly">
-        <img
+        <NuxtImg
           v-if="userStore.avatarUrl"
           :src="userStore.avatarUrl"
           :alt="userStore.name"
@@ -47,5 +46,4 @@ const showChangeEmail = ref(false);
         </div>
       </div>
     </div>
-  </div>
 </template>

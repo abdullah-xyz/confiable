@@ -6,7 +6,7 @@ const showMenu = ref(false);
 </script>
 
 <template>
-  <div class="bg-background fixed w-screen top-0 left-0 z-10">
+  <div class="backdrop-blur sticky w-screen top-0 left-0 z-10">
     <div class="max-w-screen-2xl mx-auto px-4">
       <div
         class="flex justify-between h-16 md:h-24 items-center border-b-2 border-muted py-1"
@@ -30,8 +30,8 @@ const showMenu = ref(false);
         <!-- home -->
         <NuxtLink @click="if (showMenu) showMenu = !showMenu;" to="/">
           <span class="sr-only">Home</span>
-          <img
-            class="h-16 md:h-20 lg:h-28 w-auto transition duration-300 mr-8 md:hover:scale-110"
+          <NuxtImg
+            class="h-16 md:h-20 lg:h-28 w-auto transition duration-300 mr-8"
             src="/img/logo.png"
           />
         </NuxtLink>

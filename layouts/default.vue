@@ -17,11 +17,13 @@ onMounted(async () => {
 <template>
   <AuthForm v-if="appStore.isFormOpen" />
   <Toasts />
-  <Navbar />
-
-  <slot />
-
-  <Footer />
+  <div class="bg-background text-text min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
+    <Navbar />
+    <div>
+      <slot />
+    </div>
+    <Footer />
+  </div>
 </template>
 
 <style>
