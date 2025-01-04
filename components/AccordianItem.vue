@@ -18,7 +18,7 @@ const active = ref(false);
   >
     <div class="flex items-center">
       <slot name="header">
-        <NuxtImg class="mr-2 size-5" :src="'/img/' + props.icon" />
+        <NuxtImg v-if="props.icon" class="mr-2 size-5" :src="'/img/' + props.icon" />
         <div class="text-xl font-medium hover:underline">{{ props.title }}</div>
       </slot>
     </div>

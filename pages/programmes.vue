@@ -149,10 +149,10 @@ const items = [
         <div v-for="courses in content">
           <NuxtLink to="/lecture">
             <div
-              class="my-2 flex justify-between rounded-md border-2 border-transparent px-4 py-2 text-lg hover:border-accent hover:underline"
+              class="my-2 flex justify-between rounded-md border-transparent px-4 py-2 text-lg hover:shadow hover:shadow-secondary border hover:underline"
             >
               <span class="font-medium">{{ courses.title }}</span>
-              <span>{{ courses.description }}</span>
+              <span class="hidden md:block">{{ courses.description }}</span>
               <span class="rounded-md bg-accent px-3 text-primaryText">{{
                 courses.price
               }}</span>
