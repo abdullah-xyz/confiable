@@ -68,6 +68,7 @@ export const useUserStore = defineStore("user", () => {
 
     const { data, error } = await supabase.auth.signInWithOAuth({
       provider: "google",
+      
     });
 
     console.log("google sign in", data, "error: ", error);

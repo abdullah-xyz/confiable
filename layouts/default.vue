@@ -2,6 +2,7 @@
 const userStore = useUserStore();
 const appStore = useAppStore();
 const user = useSupabaseUser();
+const modalStore = useModalStore()
 
 onMounted(async () => {
   watchEffect(() => {
@@ -15,7 +16,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <AuthForm v-if="appStore.isFormOpen" />
+  <Modal />
   <Toasts />
   <div class="bg-background text-text min-h-[100dvh] grid grid-rows-[auto_1fr_auto]">
     <Navbar />

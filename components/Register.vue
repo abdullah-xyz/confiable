@@ -1,9 +1,16 @@
 <script setup lang="ts">
 import * as yup from "yup";
+import Login from "./Login.vue";
 const userStore = useUserStore();
 const appStore = useAppStore();
+const modalStore = useModalStore()
 
 const error = ref("");
+
+// expose modal title
+defineExpose({
+  header: "Sign Up"
+})
 
 const { handleSubmit, isSubmitting } = useForm({
   validationSchema: toTypedSchema(
@@ -28,7 +35,7 @@ const submitForm = handleSubmit(async (values, actions) => {
       type: "success",
       content: "Please verify your email",
     });
-    appStore.closeForm();
+    modalStore.close();
   } catch (err: any) {
     error.value = err.message;
     // switch (err.code) {
@@ -49,37 +56,37 @@ const submitForm = handleSubmit(async (values, actions) => {
 </script>
 
 <template>
-  <form @submit.prevent="submitForm">
-    <!-- email -->
-    <InputText name="email" label="Email" />
-    <!-- name -->
-    <InputText name="name" label="Name" />
-    <!-- password -->
-    <InputText name="password" label="Password" type="password" />
-    <!-- Confirm Password -->
-    <InputText
-      name="passwordConfirm"
-      label="Confirm Password"
-      type="password"
-    />
-    <!-- Error -->
-    <div class="text-sm text-error">{{ error }}</div>
-
-    <!-- button -->
-    <Button
-      class="mt-4"
-      label="Sign Up"
-      :submitting="isSubmitting"
-      rounded
-    />
-
-    <p class="my-4">
-      Already have an account?
-      <span
-        @click="appStore.formRoute = 'login'"
-        class="underline hover:cursor-pointer"
-        >Login</span
-      >
-    </p>
-  </form>
+  <div class="p-6 bg-background rounded-b-md h-screen md:h-[30rem]">
+    <form class="flex flex-col w-screen md:w-96 gap-4 items-center h-full px-6" @submit.prevent="submitForm">
+      <!-- email -->
+      <InputText name="email" label="Email" />
+      <!-- name -->
+      <InputText name="name" label="Name" />
+      <!-- password -->
+      <InputText name="password" label="Password" type="password" />
+      <!-- Confirm Password -->
+      <InputText
+        name="passwordConfirm"
+        label="Confirm Password"
+        type="password"
+      />
+      <!-- Error -->
+      <div class="text-sm text-error">{{ error }}</div>
+      <!-- button -->
+      <Button
+        class="mt-4"
+        label="Sign Up"
+        :submitting="isSubmitting"
+        rounded
+      />
+      <p class="my-4">
+        Already have an account?
+        <span
+          @click="modalStore.replace(Login, {})"
+          class="underline hover:cursor-pointer"
+          >Login</span
+        >
+      </p>
+    </form>
+  </div>
 </template>

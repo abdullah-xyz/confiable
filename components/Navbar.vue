@@ -1,15 +1,20 @@
 <script setup lang="ts">
+import Login from './Login.vue';
+import Register from './Register.vue';
+
 const userStore = useUserStore();
 const appStore = useAppStore();
+const modalStore = useModalStore()
+
 
 const showMenu = ref(false);
 </script>
 
 <template>
-  <div class="backdrop-blur sticky w-screen top-0 left-0 z-10">
+  <div class="backdrop-blur sticky w-screen top-0 left-0 z-10 border-b border-primary">
     <div class="max-w-screen-2xl mx-auto px-4">
       <div
-        class="flex justify-between h-16 md:h-24 items-center border-b-2 border-muted py-1"
+        class="flex justify-between h-16 md:h-24 items-center py-1"
       >
         <!-- burger menu for mobile -->
         <div class="-mr-2 -my-2 lg:hidden">
@@ -78,9 +83,9 @@ const showMenu = ref(false);
           </NuxtLink>
 
           <!-- seperator -->
-          <div class="flex my-2">
+          <!-- <div class="flex my-2">
             <span class="h-[1px] bg-muted w-full"></span>
-          </div>
+          </div> -->
 
           <!-- auth -->
           <!-- Logout -->
@@ -102,7 +107,7 @@ const showMenu = ref(false);
           <div v-else>
             <div
               @click="
-                appStore.openForm('login');
+                modalStore.open(Login, {});
                 showMenu = !showMenu;
               "
             >
@@ -114,7 +119,7 @@ const showMenu = ref(false);
             </div>
             <div
               @click="
-                appStore.openForm('register');
+                modalStore.open(Register, {});
                 showMenu = !showMenu;
               "
             >
@@ -154,7 +159,7 @@ const showMenu = ref(false);
         >
           <NuxtLink class="hover:cursor-pointer" to="/profile">
             <div>
-              <img
+              <NuxtImg
                 v-if="userStore.avatarUrl"
                 :src="userStore.avatarUrl"
                 class="border-2 rounded-full w-11"
@@ -171,14 +176,14 @@ const showMenu = ref(false);
         <!-- Login / Register -->
         <div v-else class="hidden lg:flex items-center justify-end lg:flex-1">
           <span
-            @click="appStore.openForm('login')"
+            @click="modalStore.open(Login, {})"
             class="whitespace-nowrap font-medium text-base text-text hover:cursor-pointer"
           >
             Sign In
           </span>
           <Button
             class="ml-8"
-            @click="appStore.openForm('register')"
+            @click="modalStore.open(Register, {})"
             label="Sign Up"
           />
         </div>

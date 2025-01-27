@@ -1,23 +1,17 @@
 <script setup lang="ts">
-const appStore = useAppStore()
+const appStore = useAppStore();
 </script>
 
 <template>
-  <div
-  class="md:py-0 h-screen py-16 px-10 max-w-screen-2xl mx-auto grid items-center lg:grid-cols-[2fr_3fr] gap-14 md:gap-16 xl:gap-32"
-  >
-  <div class="bg-gradient-to-br from-transparent via-transparent to-secondary absolute top-0 right-0 w-screen h-full">h</div>
-    <!-- <div class="text-5xl max-w-screen-2xl mx-auto text-center col-span-2 text-white bg-primary p-3" >Transfoming Challenges into Oppurtunities</div> -->
-
-      <div>
-        <h2 class="text-6xl font-bold mb-8">Welcome to Confiable Business!</h2>
-        <h3 class="text-4xl text-accent font-medium mb-4">Helping establish solid business! </h3>
-        <h3 class="text-4xl mb-4">
-        Teaching aspiring enterpeneur to start and grow their businesses..
-      </h3>
-        
-        <Button @click="appStore.openForm('register')" label="Sign Up" />
-      </div>
-      <VideoPlayer class="" />
+  <!-- <div class="size-[700px] bg-secondary absolute rounded-full blur-2xl bottom-0 -translate-x-1/3 translate-y-1/2 -z-10"></div>
+  <div class="size-[700px] bg-secondary absolute rounded-full blur-2xl top-0 left-0 -z-10"></div> -->
+  <div class="flex flex-col items-center pt-20 pb-16 gap-16 bg-gradient-to-b from-transparent from-75% to-secondary">
+    <div class="text-center tracking-wider">
+      <h2 class="text-6xl text-primary font-bold pb-4">Welcome To Confiable Business</h2>
+      <h3 class="text-5xl text-primary font-medium mb-4">Want To Be An Entrepreneur! </h3>
     </div>
+    <div class="w-11/12 md:w-4/6">
+      <VideoPlayer />
+    </div>
+  </div>
 </template>
