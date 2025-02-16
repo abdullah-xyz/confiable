@@ -30,6 +30,7 @@ export default defineNuxtConfig({
     "@vee-validate/nuxt",
     "@nuxtjs/supabase",
     "@nuxt/image",
+    "nuxt-marquee",
   ],
 
   plugins: ["~/plugins/razorpay.client.ts"],

@@ -8,6 +8,7 @@
     "start": "node .output/server/index.mjs",
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "host": "nuxt dev --host 0.0.0.0", 
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -19,6 +20,7 @@
     "@types/node": "^18.0.0",
     "nuxt": "^3.9.0",
     "nuxt-icon": "^0.4.2",
+    "nuxt-marquee": "^1.0.4",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "yup": "^1.4.0"

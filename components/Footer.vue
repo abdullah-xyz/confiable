@@ -7,7 +7,8 @@
         class="col-span-3 grid grid-cols-subgrid text-xl font-medium md:col-span-1 md:row-span-3 md:grid-rows-subgrid"
       >
         <h3 class="col-start-2 md:col-start-1 md:row-start-2">
-          Confiable Business
+          <!-- Confiable Business -->
+           <NuxtImg class="w-60 absolute -translate-y-14" src="/img/confiable-full-white.png" />
         </h3>
       </div>
       <!-- </div>

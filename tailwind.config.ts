@@ -1,6 +1,7 @@
 module.exports = {
   theme: {
     plugins: [],
+    
     colors: {
       transparent: "transparent",
       current: "currentColor",

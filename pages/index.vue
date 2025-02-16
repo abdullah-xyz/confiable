@@ -21,8 +21,8 @@ const appStore = useAppStore();
   </div> -->
   <!-- Features -->
   <!-- learn -->
-  <div class="bg-gradient-to-b from-secondary to-transparent to-15% py-24">
-    <h2 class="pt-8 text-center text-4xl font-medium tracking-wide text-primary">
+  <div class="py-20 w-screen">
+    <h2 class="pt-8 text-center text-2xl md:text-4xl font-medium tracking-wide text-primary">
       Helping Establish Solid Business
     </h2>
     <div class="pt-16">
@@ -40,7 +40,7 @@ const appStore = useAppStore();
                 name="material-symbols-light:school-outline-rounded"
               />
             </div>
-            <h3 class="pt-3 text-2xl font-medium">Courses</h3>
+            <h3 class="pt-3 text-2xl font-medium">Programs</h3>
             <p class="pt-1 text-center text-lg">
               Learn from our experts to rapidly build your business
             </p>
@@ -57,7 +57,7 @@ const appStore = useAppStore();
                 name="material-symbols-light:person-raised-hand-outline-rounded"
               />
             </div>
-            <h3 class="pt-3 text-2xl font-medium">Counseling</h3>
+            <h3 class="pt-3 text-2xl font-medium">Mentorship</h3>
             <p class="pt-1 text-center text-lg">
               Consult our experts to quickly grow your business
             </p>
@@ -85,13 +85,13 @@ const appStore = useAppStore();
   </div>
 
   <!-- Course level -->
-  <div class="mt-6 py-24">
+  <div class="mt-6 w-screen py-24">
     <div
       class="mx-10 flex flex-col justify-evenly gap-32 lg:max-w-7xl xl:mx-auto xl:flex-row"
     >
       <!-- image -->
       <div class="w-[380px]">
-        <NuxtImg src="/img/stock.jpg" />
+        <NuxtImg class="rounded-3xl" src="/img/stock.jpg" />
       </div>
       <div class="flex flex-1 flex-col justify-center gap-16">
         <div class="text-3xl font-medium text-primary">
@@ -126,9 +126,9 @@ const appStore = useAppStore();
   </div>
 
   <!-- why us  -->
-  <div class="py-24">
+  <div class="py-24 w-screen">
     <div class="mx-auto max-w-7xl px-4 py-8">
-      <h2 class="mb-5 text-4xl font-medium">Why Us?</h2>
+      <h2 class="mb-5 text-4xl tracking-wide text-primary font-medium">Why Confiable?</h2>
       <p class="text-lg">
         We offer of quality services to help you to be an entrepreneur, a
         business person and many more. Our dedicated and experienced
@@ -138,7 +138,7 @@ const appStore = useAppStore();
     </div>
     <!-- Affordability  -->
     <div class="mx-auto max-w-7xl px-4 py-8">
-      <h2 class="text-3xl font-medium">Affordability</h2>
+      <h2 class="text-3xl text-wide text-primary font-medium">Affordability</h2>
       <p class="text-lg">
         We have designed our courses, services, and consultation at a very low
         price for everyone’s benefit. There are no age-related limitations,
@@ -147,7 +147,7 @@ const appStore = useAppStore();
     </div>
     <!-- Reason to enroll -->
     <div class="mx-auto max-w-7xl px-4 py-8">
-      <h2 class="text-3xl font-medium">Reason to Enroll</h2>
+      <h2 class="text-3xl text-wide text-primary font-medium">Reason to Join</h2>
       <p class="text-lg">
         Confiable Business is helping & guiding business personnel all over
         India to grow their businesses and in establishing start-ups. Be it
@@ -164,17 +164,18 @@ const appStore = useAppStore();
     </div>
   </div>
   <!-- Feedback  -->
-  <div class="mx-auto max-w-7xl px-4 py-10">
+  <div class="w-screen px-4 py-10">
     <h2 class="text-3xl font-medium">What other says</h2>
     <p class="text-lg">
       We have designed our courses, services, and consultation at a very low
       price for everyone’s benefit. There are no age-related limitations,
       everyone can benefit from Confiable Business.
     </p>
+    <Review />
   </div>
 
   <!-- knowledge Corner  -->
-  <div class="mx-auto max-w-7xl px-4 py-24">
+  <div class="w-screen px-4 py-24">
     <h2 class="mb-3 text-3xl font-medium">Knowledge Corner</h2>
     <div class="flex gap-5">
       <!-- boooks -->
@@ -219,7 +220,7 @@ const appStore = useAppStore();
   </div>
 
   <!-- Job seeking  -->
-  <div class="mx-auto max-w-7xl px-4 py-10">
+  <div class="w-screen px-4 py-10">
     <h2 class="mb-3 text-3xl font-medium">Job Seeking</h2>
     <div class="flex gap-5">
       <!-- boooks -->

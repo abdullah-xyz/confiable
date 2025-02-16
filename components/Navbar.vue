@@ -37,7 +37,7 @@ const showMenu = ref(false);
           <span class="sr-only">Home</span>
           <NuxtImg
             class="h-16 md:h-20 lg:h-28 w-auto transition duration-300 mr-8"
-            src="/img/logo.png"
+            src="/img/confiable-full.png"
           />
         </NuxtLink>
 
@@ -50,7 +50,7 @@ const showMenu = ref(false);
             <span
               class="text-base font-medium text-text block px-4 py-6 rounded-md hover:bg-secondary"
             >
-              Programmes
+              Programs
             </span>
           </NuxtLink>
           <NuxtLink @click="showMenu = !showMenu" to="/services">
@@ -136,7 +136,7 @@ const showMenu = ref(false);
         <nav class="hidden lg:flex space-x-10">
           <!-- nav links -->
           <NuxtLink to="/programmes">
-            <span class="text-base font-medium text-text"> Programmes </span>
+            <span class="text-base font-medium text-text"> Programs </span>
           </NuxtLink>
           <NuxtLink to="/services">
             <span class="text-base font-medium text-text"> Services </span>
