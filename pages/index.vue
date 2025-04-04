@@ -21,6 +21,10 @@ const appStore = useAppStore();
   </div> -->
   <!-- Features -->
   <!-- learn -->
+<div>
+  <Review />
+
+</div>
   <div class="py-20 w-screen">
     <h2 class="pt-8 text-center text-2xl md:text-4xl font-medium tracking-wide text-primary">
       Helping Establish Solid Business
@@ -163,19 +167,9 @@ const appStore = useAppStore();
       </NuxtLink>
     </div>
   </div>
-  <!-- Feedback  -->
-  <div class="w-screen px-4 py-10">
-    <h2 class="text-3xl font-medium">What other says</h2>
-    <p class="text-lg">
-      We have designed our courses, services, and consultation at a very low
-      price for everyone’s benefit. There are no age-related limitations,
-      everyone can benefit from Confiable Business.
-    </p>
-    <Review />
-  </div>
 
   <!-- knowledge Corner  -->
-  <div class="w-screen px-4 py-24">
+  <div class="max-w-7xl mx-auto px-4 py-24">
     <h2 class="mb-3 text-3xl font-medium">Knowledge Corner</h2>
     <div class="flex gap-5">
       <!-- boooks -->
@@ -220,7 +214,7 @@ const appStore = useAppStore();
   </div>
 
   <!-- Job seeking  -->
-  <div class="w-screen px-4 py-10">
+  <div class="max-w-7xl mx-auto px-4 py-10">
     <h2 class="mb-3 text-3xl font-medium">Job Seeking</h2>
     <div class="flex gap-5">
       <!-- boooks -->
